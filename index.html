@@ -1,0 +1,374 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cory MacVie - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;900&amp;display=swap"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&amp;display=swap"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&amp;display=swap"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><link id="all-fonts-link-font-newsreader" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&amp;display=swap"><style id="all-fonts-style-font-newsreader">.font-newsreader { font-family: 'Newsreader', serif !important; }</style><link id="all-fonts-link-font-google-sans-flex" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-google-sans-flex">.font-google-sans-flex { font-family: 'Google Sans Flex', sans-serif !important; }</style><link id="all-fonts-link-font-oswald" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-oswald">.font-oswald { font-family: 'Oswald', sans-serif !important; }</style><link id="all-fonts-link-font-dm-sans" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&amp;display=swap"><style id="all-fonts-style-font-dm-sans">.font-dm-sans { font-family: 'DM Sans', sans-serif !important; }</style></head>
+<body class="bg-slate-100 font-['Inter'] antialiased">
+    
+    <!-- Map Background -->
+    <div class="fixed leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom w-1/2 h-full z-0 top-0 right-0" tabindex="0" style="outline-style: none" id="map"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer" style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/175/408@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(188px, 148px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/176/408@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(444px, 148px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/175/409@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(188px, 404px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/176/409@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(444px, 404px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/175/407@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(188px, -108px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/176/407@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(444px, -108px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/174/408@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-68px, 148px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/177/408@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(700px, 148px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/174/409@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-68px, 404px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/177/409@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(700px, 404px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/175/410@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(188px, 660px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/176/410@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(444px, 660px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/174/407@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-68px, -108px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/177/407@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(700px, -108px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/174/410@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-68px, 660px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/177/410@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(700px, 660px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(358px, 372px, 0px); z-index: 372;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(358px, 372px, 0px); z-index: 372;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(358px, 372px, 0px); z-index: 372;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(358px, 372px, 0px); z-index: 372;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(26283px, 5711px, 0px); z-index: 5711;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(17590px, -4208px, 0px); z-index: -4208;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(97px, 241px, 0px); z-index: 241;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(1071px, 373px, 0px); z-index: 373;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(953px, 480px, 0px); z-index: 480;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(44969.6px, 104672px, 0px) scale(512);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"></div></div><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(185px, -3px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer" style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/175/408@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(78px, 148px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/175/409@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(78px, 404px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/174/408@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-178px, 148px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/176/408@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(334px, 148px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/174/409@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-178px, 404px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/176/409@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(334px, 404px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/175/407@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(78px, -108px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/175/410@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(78px, 660px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/174/407@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-178px, -108px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/176/407@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(334px, -108px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/174/410@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-178px, 660px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/176/410@2x.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(334px, 660px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/177/408@2x.png" style="width: 256px; height: 256px; transform: translate3d(590px, 148px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/177/409@2x.png" style="width: 256px; height: 256px; transform: translate3d(590px, 404px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/177/407@2x.png" style="width: 256px; height: 256px; transform: translate3d(590px, -108px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/177/410@2x.png" style="width: 256px; height: 256px; transform: translate3d(590px, 660px, 0px); opacity: 1;"><img alt="" src="https://c.basemaps.cartocdn.com/light_all/10/173/408@2x.png" style="width: 256px; height: 256px; transform: translate3d(-434px, 148px, 0px); opacity: 1;"><img alt="" src="https://a.basemaps.cartocdn.com/light_all/10/173/409@2x.png" style="width: 256px; height: 256px; transform: translate3d(-434px, 404px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/173/407@2x.png" style="width: 256px; height: 256px; transform: translate3d(-434px, -108px, 0px); opacity: 1;"><img alt="" src="https://b.basemaps.cartocdn.com/light_all/10/173/410@2x.png" style="width: 256px; height: 256px; transform: translate3d(-434px, 660px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(4397px, -5799px, 0px); z-index: -5799;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(311px, 604px, 0px); z-index: 604;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(26173px, 5711px, 0px); z-index: 5711;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(26173px, 5711px, 0px); z-index: 5711;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(26173px, 5711px, 0px); z-index: 5711;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(17480px, -4208px, 0px); z-index: -4208;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(-13px, 241px, 0px); z-index: 241;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(961px, 373px, 0px); z-index: 373;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div><div class="leaflet-marker-icon custom-marker leaflet-zoom-animated leaflet-interactive" tabindex="0" role="button" style="margin-left: -8px; margin-top: -8px; width: 16px; height: 16px; transform: translate3d(843px, 480px, 0px); z-index: 480;"><div style="width: 16px; height: 16px; background: rgb(100, 116, 139); border: 3px solid white; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px;"></div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(44894.5px, 104675px, 0px) scale(512);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"></div></div></div>
+    
+    <!-- Resume Container - Left Half -->
+    <div class="relative z-20 w-full md:w-1/2 min-h-screen bg-white">
+        <!-- Resume Content -->
+        <div class="h-screen overflow-y-auto">
+            <div class="p-6 md:p-8 lg:p-10">
+                <!-- Header -->
+                <header class="mb-6 border-b border-slate-200 pb-5">
+                    <h1 class="text-2xl font-semibold text-slate-900 tracking-tight mb-1">Cory MacVie</h1>
+                    <p class="text-sm text-slate-600 mb-3">Strategic Product Leader</p>
+                    <div class="flex flex-wrap gap-3 text-xs text-slate-500">
+                        <span class="flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="14" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                            Los Angeles, CA
+                        </span>
+                        <a href="tel:909-435-6551" class="flex items-center gap-1 hover:text-slate-700 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:phone" data-width="14" style="stroke-width: 1.5" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233a14 14 0 0 0 6.392 6.384"></path></svg>
+                            909-435-6551
+                        </a>
+                        <a href="mailto:cory@corymacvie.com" class="flex items-center gap-1 hover:text-slate-700 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:mail" data-width="14" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect width="20" height="16" x="2" y="4" rx="2"></rect></g></svg>
+                            cory@corymacvie.com
+                        </a>
+                        <a href="http://www.linkedin.com/in/macvie" class="flex items-center gap-1 hover:text-slate-700 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="14" height="14" viewBox="0 0 24 24" data-icon="lucide:linkedin" data-width="14" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></g></svg>
+                            @MacVie
+                        </a>
+                    </div>
+                </header>
+
+                <!-- Summary Section -->
+                <section class="mb-6">
+                    <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Summary</h2>
+                    <p class="leading-relaxed text-xs text-slate-600">Strategic product leader with extensive experience guiding successful SaaS products from concept to market. Skilled in translating complex user needs into intuitive, high-ROI solutions that drive adoption and retention. Adept at leading cross-functional teams through product lifecycles while balancing technical constraints, business goals, and customer needs.</p>
+                </section>
+
+                <!-- Experience Section -->
+                <section class="mb-6">
+                    <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Experience</h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Healthicity -->
+                        <div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="40.7757" data-lng="-112.5447" data-title="Salt Lake City, UT">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Senior Director of Product - Compliance</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">04/2025 - Current</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-1.5"><a href="http://www.healthicity.com">Healthicity</a></p>
+                            <ul class="text-xs text-slate-500 leading-relaxed space-y-1 list-disc list-inside">
+                                <li>Owns the strategy and roadmap for Healthicity’s compliance solutions.</li>
+                                <li>Drives customer value, adoption, and differentiation through data and market insight.</li>
+                                <li>Partners cross-functionally to improve retention, revenue, and client satisfaction.</li>
+                            </ul>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                Salt Lake City, UT
+                            </div>
+                        </div>
+
+                        <!-- CompFox -->
+                        <div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="33.7881" data-lng="-118.1560" data-title="Long Beach, CA">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Head of Product</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">10/2024 - Current</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-1.5"><a href="http://www.compfox.io">CompFox</a></p>
+                            <ul class="text-xs text-slate-500 leading-relaxed space-y-1 list-disc list-inside">
+                                <li>Led comprehensive product strategy for AI-powered legal research platform</li>
+                                <li>Implemented LangChain framework for sophisticated AI agents analyzing legal documents</li>
+                                <li>Designed RAG pipeline using vector embeddings for precise legal database retrieval</li>
+                            </ul>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                Long Beach, CA
+                            </div>
+                        </div><a href="http://www.healthicity.com">
+
+                        <!-- Fulcrum - Sales Engineer -->
+                        </a><div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="27.7676" data-lng="-82.6403" data-title="St. Petersburg, FL"><a href="http://www.healthicity.com">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Enterprise Sales Engineer</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">11/2022 - 01/2025</span>
+                            </div>
+                            </a><p class="text-sm text-slate-600 mb-1.5"><a href="http://www.fulcrumapp.com">Fulcrum</a></p>
+                            <ul class="text-xs text-slate-500 leading-relaxed space-y-1 list-disc list-inside">
+                                <li>Collaborated with sales and product teams to design customized solutions for enterprise clients</li>
+                                <li>Hired and trained all sales engineers across the sales teams</li>
+                                <li>Provided technical guidance throughout the sales cycle</li>
+                            </ul>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                St Petersburg, FL
+                            </div>
+                        </div>
+
+                        <!-- Fulcrum - CSM -->
+                        <div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="27.7676" data-lng="-82.6403" data-title="St. Petersburg, FL">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Enterprise Customer Success Manager</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">09/2018 - 11/2022</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-1.5"><a href="http://www.fulcrumapp.com">Fulcrum</a></p>
+                            <ul class="text-xs text-slate-500 leading-relaxed space-y-1 list-disc list-inside">
+                                <li>Championed clients' success through strong relationships and goal fulfillment</li>
+                                <li>Collaborated across teams to align solutions and guide onboarding</li>
+                                <li>Tracked metrics to suggest optimizations and ensure commitments were met</li>
+                            </ul>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                St Petersburg, FL
+                            </div>
+                        </div>
+
+                        <!-- Fulcrum - PM -->
+                        <div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="27.7676" data-lng="-82.6403" data-title="St. Petersburg, FL">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Product Manager</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">09/2014 - 09/2018</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-1.5"><a href="http://www.fulcrumapp.com">Fulcrum</a></p>
+                            <ul class="text-xs text-slate-500 leading-relaxed space-y-1 list-disc list-inside">
+                                <li>Led end-to-end product lifecycle management, from ideation to release</li>
+                                <li>Conducted comprehensive market research and user interviews</li>
+                                <li>Created strategic product roadmaps with 95% on-time delivery</li>
+                            </ul>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                St. Petersburg, FL
+                            </div>
+                        </div>
+
+                        <!-- FEMA -->
+                        <div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="39.0997" data-lng="-94.5786" data-title="Kansas City, KS">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Regional Geospatial Coordinator</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">06/2010 - 09/2014</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-1.5"><a href="http://www.fema.gov">FEMA - Region 7 &amp; 9</a></p>
+                            <ul class="text-xs text-slate-500 leading-relaxed space-y-1 list-disc list-inside">
+                                <li>Developed advanced geospatial systems for disaster response</li>
+                                <li>Enhanced regional GIS and remote sensing capabilities</li>
+                                <li>Built strong partnerships with State GIS partners</li>
+                            </ul>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                Kansas City, KS
+                            </div>
+                        </div>
+
+                        <!-- Apple -->
+                        <div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="34.2011" data-lng="-118.6015" data-title="Canoga Park, CA">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Specialist &amp; Genius Bar Technician</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">08/2008 - 05/2011</span>
+                            </div>
+                            <p class="text-sm text-slate-600 mb-1.5">Apple</p>
+                            <ul class="text-xs text-slate-500 leading-relaxed space-y-1 list-disc list-inside">
+                                <li>Achieved top sales associate status for computers and mobile devices</li>
+                                <li>Developed and delivered effective training to diverse audiences</li>
+                                <li>Resolved technical challenges under tight deadlines</li>
+                            </ul>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                Canoga Park, CA
+                            </div>
+                        </div>
+                    </div><a href="http://www.healthicity.com">
+                </a></section><a href="http://www.healthicity.com">
+
+                <!-- Education Section -->
+                <section class="mb-6">
+                    <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Education</h2>
+                    
+                    <div class="space-y-4">
+                        <div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="34.0511" data-lng="-117.2633" data-title="Loma Linda, CA">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Global Health | MPH</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">2006 - 2008</span>
+                            </div>
+                            <p class="text-sm text-slate-600">Loma Linda University</p>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                Loma Linda, CA
+                            </div>
+                        </div>
+
+                        <div class="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50" data-lat="33.9292" data-lng="-117.4254" data-title="Riverside, CA">
+                            <div class="flex justify-between items-start mb-1">
+                                <h3 class="text-sm font-medium text-slate-900">Theology | BAT</h3>
+                                <span class="text-xs text-slate-400 whitespace-nowrap ml-3">2002 - 2006</span>
+                            </div>
+                            <p class="text-sm text-slate-600">California Baptist University</p>
+                            <div class="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="12" height="12" viewBox="0 0 24 24" data-icon="lucide:map-pin" data-width="12" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></g></svg>
+                                Riverside, CA
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Strengths Section -->
+                <section class="mb-6">
+                    <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Strengths</h2>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Owner Attitude</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Business Development</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Strategic Thinker</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Strong Communicator</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Detail-oriented</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Creative Problem Solver</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Data-driven</span>
+                        <span class="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">Team Player</span>
+                    </div>
+                </section>
+
+                <!-- Tools Section -->
+                <section class="mb-6">
+                    <h2 class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Tools</h2>
+                    <div class="space-y-2 text-xs text-slate-600">
+                        <p><span class="font-medium text-slate-700">Product:</span> Jira, Confluence, Github, GitLab, Linear, Pendo, Mixpanel, Amplitude, AWS, Google Cloud</p>
+                        <p><span class="font-medium text-slate-700">Design:</span> Figma, Framer, Adobe Suite, Radix</p>
+                        <p><span class="font-medium text-slate-700">AI:</span> LangChain Framework</p>
+                        <p><span class="font-medium text-slate-700">Sales:</span> Salesforce, Hubspot CRM, Outreach, LinkedIn Sales Navigator</p>
+                        <p><span class="font-medium text-slate-700">Analytics:</span> Tableau, Power BI, Looker</p>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                </a><footer class="pt-5 border-t border-slate-200"><a href="http://www.healthicity.com">
+                    </a><div class="flex items-center justify-between text-xs text-slate-400"><a href="http://www.healthicity.com">
+                        <span>References available upon request</span>
+                        </a><div class="flex gap-3"><a href="http://www.healthicity.com">
+                            </a><a href="http://www.linkedin.com/in/macvie" class="hover:text-slate-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:linkedin" data-width="16" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></g></svg>
+                            </a>
+                            <a href="https://instagram.com/whatsupcory" class="hover:text-slate-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:instagram" data-width="16" style="stroke-width: 1.5" class="iconify iconify--lucide"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8A4 4 0 0 1 16 11.37m1.5-4.87h.01"></path></g></svg>
+                            </a>
+                            <a href="http://x.com/corymacvie" class="hover:text-slate-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="16" height="16" viewBox="0 0 24 24" data-icon="lucide:twitter" data-width="16" style="stroke-width: 1.5" class="iconify iconify--lucide"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6c2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4c-.9-4.2 4-6.6 7-3.8c1.1 0 3-1.2 3-1.2"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!-- Map info card 
+    <div id="location-card" class="fixed bottom-8 right-8 bg-white/95 backdrop-blur-sm rounded-xl shadow-lg p-4 z-30 opacity-0 transition-all duration-300 transform translate-y-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                <span class="iconify text-blue-600" data-icon="lucide:map-pin" data-width="20" style="stroke-width: 1.5"></span>
+            </div>
+            <div>
+                <p id="location-name" class="text-sm font-medium text-slate-900">Los Angeles, CA</p>
+                <p id="location-coords" class="text-xs text-slate-400">34.0522°N, 118.2437°W</p>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        // Initialize map
+        const map = L.map('map', {
+            zoomControl: false,
+            attributionControl: false
+        }).setView([34.0522, -118.2437], 10);
+
+        // Add tile layer with grayscale style
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            maxZoom: 19
+        }).addTo(map);
+
+        // Custom marker icon
+        const createMarkerIcon = (isActive = false) => {
+            return L.divIcon({
+                className: 'custom-marker',
+                html: `<div style="
+                    width: ${isActive ? '24px' : '16px'};
+                    height: ${isActive ? '24px' : '16px'};
+                    background: ${isActive ? '#2563eb' : '#64748b'};
+                    border: 3px solid white;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+                    transition: all 0.3s ease;
+                "></div>`,
+                iconSize: [isActive ? 24 : 16, isActive ? 24 : 16],
+                iconAnchor: [isActive ? 12 : 8, isActive ? 12 : 8]
+            });
+        };
+
+        // Store markers
+        const markers = [];
+
+        // Add markers for all events
+        const events = document.querySelectorAll('.resume-event');
+        events.forEach((event, index) => {
+            const lat = parseFloat(event.dataset.lat);
+            const lng = parseFloat(event.dataset.lng);
+            const title = event.dataset.title;
+
+            const marker = L.marker([lat, lng], {
+                icon: createMarkerIcon(false)
+            }).addTo(map);
+
+            markers.push({ marker, lat, lng, title, element: event });
+        });
+
+        // Location card element
+        const locationCard = document.getElementById('location-card');
+        const locationName = document.getElementById('location-name');
+        const locationCoords = document.getElementById('location-coords');
+
+        // Handle hover events
+        events.forEach((event, index) => {
+            event.addEventListener('mouseenter', () => {
+                const lat = parseFloat(event.dataset.lat);
+                const lng = parseFloat(event.dataset.lng);
+                const title = event.dataset.title;
+
+                // Fly to location
+                map.flyTo([lat, lng], 12, {
+                    duration: 1.5
+                });
+
+                // Update all markers
+                markers.forEach((m, i) => {
+                    m.marker.setIcon(createMarkerIcon(i === index));
+                });
+
+                // Update location card
+                locationName.textContent = title;
+                locationCoords.textContent = `${Math.abs(lat).toFixed(4)}°${lat >= 0 ? 'N' : 'S'}, ${Math.abs(lng).toFixed(4)}°${lng >= 0 ? 'E' : 'W'}`;
+                locationCard.style.opacity = '1';
+                locationCard.style.transform = 'translateY(0)';
+
+                // Highlight event
+                event.style.backgroundColor = '#f8fafc';
+                event.style.boxShadow = '0 0 0 2px #e2e8f0';
+            });
+
+            event.addEventListener('mouseleave', () => {
+                event.style.backgroundColor = '';
+                event.style.boxShadow = '';
+            });
+        });
+
+        // Hide location card when not hovering
+        const resumeContainer = document.querySelector('.w-full.md\\:w-1\\/2');
+        if (resumeContainer) {
+            resumeContainer.addEventListener('mouseleave', () => {
+                setTimeout(() => {
+                    locationCard.style.opacity = '0';
+                    locationCard.style.transform = 'translateY(4px)';
+                }, 500);
+            });
+        }
+    </script>
+
+</body></html>
