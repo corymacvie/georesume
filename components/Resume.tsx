@@ -30,8 +30,8 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="relative z-20 min-h-screen flex flex-col items-start justify-start p-2 md:p-3 lg:p-4"
         >
-            <div className="w-full max-w-xl bg-white rounded-xl shadow-2xl overflow-hidden relative border border-slate-200" style={{ maxHeight: "calc(100vh - 4rem)" }}>
-                <div id="resume-content" ref={contentRef} className="h-full overflow-y-auto" style={{ maxHeight: "calc(100vh - 4rem)" }}>
+            <div className="w-full max-w-xl bg-white rounded-xl shadow-2xl overflow-hidden relative border border-slate-200" style={{ maxHeight: "calc(100dvh - 4rem)" }}>
+                <div id="resume-content" ref={contentRef} className="h-full overflow-y-auto" style={{ maxHeight: "calc(100dvh - 4rem)" }}>
                     <div className="p-6 md:p-8">
                         <header className="mb-6 border-b border-slate-200 pb-5">
                             <h1 className="text-2xl font-semibold text-slate-900 tracking-tight mb-1">Cory MacVie</h1>
