@@ -2,6 +2,22 @@
 
 import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.1
+        }
+    }
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+};
 
 interface Post {
     title: string;
@@ -81,12 +97,22 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
 
     return (
         <>
-            <div
+            <motion.div
                 id="slideout-overlay"
-                className={`fixed inset-0 bg-black/20 z-40 transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 bg-black/20 z-40 backdrop-blur-[2px]"
                 onClick={onClose}
             />
-            <div id="slideout-panel" className={`fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl transform transition-transform duration-300 ease-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+            <motion.div
+                id="slideout-panel"
+                initial={{ x: "100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "100%" }}
+                transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                className="fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl"
+            >
                 <div className="h-full flex flex-col">
                     <div className="flex items-center justify-between px-6 py-3 border-b border-slate-200">
                         <h2 id="panel-title" className="text-base font-semibold text-slate-900 tracking-tight">
@@ -98,15 +124,22 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                     </div>
                     <div id="panel-content" className="flex-1 overflow-y-auto p-6">
                         {type === "about" && (
-                            <div className="space-y-6">
-                                <div className="w-48 h-48 mx-auto">
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="space-y-6"
+                            >
+                                <motion.div
+                                    whileHover={{ scale: 1.02 }}
+                                    className="w-48 h-48 mx-auto"
+                                >
                                     <img
                                         src="https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/369297620_10100284904073141_3171073919037120253_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=0TBgbYFPlBMQ7kNvwHUkjH6&_nc_oc=AdnbnOTrK1wK6mfCdZkn0f6j2e-xoHvjugAVpyvTiG3uNQhXO0RsxRLc2qqJAXSlRNzeNgGaF415hOl6Oe11MnjJ&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=6sdBuvC5fm8WaBA9ll6mhQ&oh=00_AfmVONjF-ryl4_CmTyfHgCPW8-mL8begs-FZ9FnarjzzlA&oe=694ED5ED"
                                         alt="Cory MacVie"
                                         className="w-full h-full object-cover rounded-xl cursor-pointer hover:opacity-90 transition-opacity"
                                         onClick={() => onImageClick?.("https://scontent-lax3-2.xx.fbcdn.net/v/t39.30808-6/369297620_10100284904073141_3171073919037120253_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=0TBgbYFPlBMQ7kNvwHUkjH6&_nc_oc=AdnbnOTrK1wK6mfCdZkn0f6j2e-xoHvjugAVpyvTiG3uNQhXO0RsxRLc2qqJAXSlRNzeNgGaF415hOl6Oe11MnjJ&_nc_zt=23&_nc_ht=scontent-lax3-2.xx&_nc_gid=6sdBuvC5fm8WaBA9ll6mhQ&oh=00_AfmVONjF-ryl4_CmTyfHgCPW8-mL8begs-FZ9FnarjzzlA&oe=694ED5ED")}
                                     />
-                                </div>
+                                </motion.div>
                                 <div>
                                     <h3 className="text-lg font-semibold text-slate-900 tracking-tight">Cory MacVie</h3>
                                     <p className="text-sm text-slate-500">Strategic Product Leader</p>
@@ -119,7 +152,7 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                                     <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">What Drives Me</h4>
                                     <p className="text-sm text-slate-600 leading-relaxed italic">&quot;I will never stop learning. I won&apos;t just work on things that are assigned to me. I know there&apos;s no such thing as a status quo. I will never pass up an opportunity to help out a colleague, and I&apos;ll remember the days before I knew everything. I am more motivated by impact than money. I am in a marathon, not a sprint; no matter how far away the goal is, the only way to get there is to put one foot in front of the other every day. Given time, there is no problem that&apos;s insurmountable.&quot;</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         )}
                         {type === "posts" && (
                             <div className="space-y-4">
@@ -130,7 +163,13 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                                         <span className="ml-2 text-sm text-slate-500">Loading posts...</span>
                                     </div>
                                 ) : (
-                                    <div id="posts-container" className="space-y-4">
+                                    <motion.div
+                                        id="posts-container"
+                                        className="space-y-4"
+                                        variants={containerVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                    >
                                         {posts.map((post, i) => {
                                             const pubDate = new Date(post.pubDate);
                                             const formattedDate = pubDate.toLocaleDateString('en-US', {
@@ -143,7 +182,14 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                                             const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
                                             return (
-                                                <a key={i} href={post.link} target="_blank" rel="noopener noreferrer" className="block p-4 border border-slate-200 rounded-lg hover:border-slate-300 hover:bg-slate-50 transition-all cursor-pointer">
+                                                <motion.a
+                                                    key={i}
+                                                    variants={itemVariants}
+                                                    href={post.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="block p-4 border border-slate-200 rounded-lg hover:border-blue-200 hover:bg-blue-50/30 transition-all cursor-pointer shadow-sm hover:shadow-md"
+                                                >
                                                     <div className="flex items-center gap-2 text-xs text-slate-400 mb-2">
                                                         <span>{formattedDate}</span>
                                                         <span>•</span>
@@ -151,10 +197,10 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                                                     </div>
                                                     <h3 className="text-sm font-medium text-slate-900 mb-1 line-clamp-2">{post.title}</h3>
                                                     <p className="text-xs text-slate-500 leading-relaxed line-clamp-2">{textContent.substring(0, 150)}...</p>
-                                                </a>
+                                                </motion.a>
                                             );
                                         })}
-                                    </div>
+                                    </motion.div>
                                 )}
                             </div>
                         )}
@@ -167,9 +213,23 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                                         <span className="ml-2 text-sm text-slate-500">Loading books...</span>
                                     </div>
                                 ) : (
-                                    <div id="books-container" className="space-y-4">
+                                    <motion.div
+                                        id="books-container"
+                                        className="grid grid-cols-1 gap-4"
+                                        variants={containerVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                    >
                                         {books.map((book, i) => (
-                                            <a key={i} href={book.link} target="_blank" rel="noopener noreferrer" className="flex gap-4 p-3 border border-slate-200 rounded-lg hover:border-slate-300 hover:bg-slate-50 transition-all">
+                                            <motion.a
+                                                key={i}
+                                                variants={itemVariants}
+                                                whileHover={{ scale: 1.01, x: 4 }}
+                                                href={book.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex gap-4 p-3 border border-slate-200 rounded-lg hover:border-blue-200 hover:bg-blue-50/30 transition-all shadow-sm hover:shadow-md"
+                                            >
                                                 <img src={book.coverUrl || 'https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg'} alt={book.title} className="w-16 h-24 object-cover rounded shadow-sm shrink-0" />
                                                 <div className="flex-1 min-w-0">
                                                     <h4 className="text-sm font-medium text-slate-900 line-clamp-2 mb-1">{book.title}</h4>
@@ -180,14 +240,18 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                                                         ))}
                                                     </div>
                                                 </div>
-                                            </a>
+                                            </motion.a>
                                         ))}
-                                    </div>
+                                    </motion.div>
                                 )}
                             </div>
                         )}
                         {type === "work" && (
-                            <div className="space-y-6">
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                className="space-y-6"
+                            >
                                 <div>
                                     <h3 className="text-xl font-semibold text-slate-900 tracking-tight mb-3">Build Your Product With Confidence</h3>
                                     <p className="text-sm text-slate-600 leading-relaxed">I help founders and teams design, build, and launch software products—from early ideas to production-ready platforms. I specialize in turning complex requirements into simple, usable products.</p>
@@ -233,13 +297,17 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                                             { title: "Fractional product leadership", desc: "Strategy, execution, and oversight", icon: "lucide:users", color: "text-purple-500" },
                                             { title: "Advisory & product audits", desc: "Direction, clarity, and next steps", icon: "lucide:lightbulb", color: "text-purple-500" }
                                         ].map((item, idx) => (
-                                            <div key={idx} className="p-3 bg-slate-50 rounded-lg">
+                                            <motion.div
+                                                key={idx}
+                                                whileHover={{ x: 5 }}
+                                                className="p-3 bg-slate-50 rounded-lg border border-slate-100"
+                                            >
                                                 <div className="flex items-center gap-2 mb-1">
                                                     <Icon icon={item.icon} className={`${item.color} w-4 h-4`} />
                                                     <p className="text-sm font-medium text-slate-900">{item.title}</p>
                                                 </div>
                                                 <p className="text-xs text-slate-500">{item.desc}</p>
-                                            </div>
+                                            </motion.div>
                                         ))}
                                     </div>
                                 </div>
@@ -254,31 +322,43 @@ const Panel = ({ isOpen, type, onClose, onImageClick }: PanelProps) => {
                                     <h4 className="text-sm font-semibold text-slate-900 mb-2">Let&apos;s Talk</h4>
                                     <p className="text-sm text-slate-600">Have an idea, an MVP, or an existing product that needs improvement? Reach out using the buttons below.</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         )}
                     </div>
                     {type === "work" && (
                         <div id="panel-footer" className="border-t border-slate-200 bg-white p-4">
                             <div className="space-y-2">
-                                <a href="https://zcal.co/corymacvie/30min" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full p-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all text-sm font-medium">
+                                <motion.a
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.98 }}
+                                    href="https://zcal.co/corymacvie/30min" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 w-full p-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all text-sm font-medium"
+                                >
                                     <Icon icon="lucide:calendar" className="w-[18px] h-[18px]" style={{ strokeWidth: 1.5 }} />
                                     Schedule a Call
-                                </a>
+                                </motion.a>
                                 <div className="flex gap-2">
-                                    <a href="mailto:cory@corymacvie.com" className="flex items-center justify-center gap-2 flex-1 p-3 border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium">
+                                    <motion.a
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        href="mailto:cory@corymacvie.com" className="flex items-center justify-center gap-2 flex-1 p-3 border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium"
+                                    >
                                         <Icon icon="lucide:mail" className="w-[18px] h-[18px]" style={{ strokeWidth: 1.5 }} />
                                         Email Me
-                                    </a>
-                                    <a href="http://www.linkedin.com/in/macvie" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 flex-1 p-3 border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium">
+                                    </motion.a>
+                                    <motion.a
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        href="http://www.linkedin.com/in/macvie" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2 flex-1 p-3 border border-slate-200 text-slate-700 rounded-lg hover:bg-slate-50 transition-all text-sm font-medium"
+                                    >
                                         <Icon icon="lucide:linkedin" className="w-[18px] h-[18px]" style={{ strokeWidth: 1.5 }} />
                                         LinkedIn
-                                    </a>
+                                    </motion.a>
                                 </div>
                             </div>
                         </div>
                     )}
                 </div>
-            </div>
+            </motion.div>
         </>
     );
 };

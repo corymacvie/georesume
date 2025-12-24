@@ -1,6 +1,6 @@
 "use client";
-
 import { Icon } from "@iconify/react";
+import { motion } from "framer-motion";
 
 interface InfoCardProps {
     isVisible: boolean;
@@ -12,9 +12,13 @@ interface InfoCardProps {
 
 const InfoCard = ({ isVisible, photo, name, role, quote }: InfoCardProps) => {
     return (
-        <div
+        <motion.div
             id="info-card"
-            className={`fixed bottom-2 right-2 md:bottom-3 md:right-3 lg:bottom-4 lg:right-4 w-72 bg-white rounded-xl shadow-2xl z-30 overflow-hidden border border-slate-200 hidden md:block ${isVisible ? "visible" : ""}`}
+            initial={{ opacity: 0, x: 100, scale: 0.95 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            exit={{ opacity: 0, x: 100, scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            className="fixed bottom-2 right-2 md:bottom-3 md:right-3 lg:bottom-4 lg:right-4 w-72 bg-white rounded-xl shadow-2xl z-30 overflow-hidden border border-slate-200 hidden md:block"
         >
             <div className="p-5">
                 <div className="flex items-start gap-3">
@@ -36,8 +40,9 @@ const InfoCard = ({ isVisible, photo, name, role, quote }: InfoCardProps) => {
                     {quote}
                 </p>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
 export default InfoCard;
+

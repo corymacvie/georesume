@@ -2,6 +2,7 @@
 
 import { Icon } from "@iconify/react";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 interface LightboxProps {
     isOpen: boolean;
@@ -20,37 +21,51 @@ const Lightbox = ({ isOpen, image, caption, onClose }: LightboxProps) => {
     }, [onClose]);
 
     return (
-        <div
+        <motion.div
             id="lightbox"
-            className={`fixed inset-0 bg-black/90 z-60 transition-opacity duration-300 flex flex-col items-center justify-center p-4 md:p-8 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none hidden"}`}
-            style={{ zIndex: 60 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/90 z-60 backdrop-blur-sm flex flex-col items-center justify-center p-4 md:p-8"
             onClick={onClose}
         >
-            <button
+            <motion.button
                 id="lightbox-close"
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
                 onClick={onClose}
                 className="absolute top-4 right-4 p-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
             >
                 <Icon icon="lucide:x" className="w-6 h-6 text-white" style={{ strokeWidth: 1.5 }} />
-            </button>
+            </motion.button>
             {image && (
-                <img
+                <motion.img
                     id="lightbox-image"
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.9, opacity: 0 }}
+                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
                     src={image}
                     alt="Work sample"
                     className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl"
                     onClick={(e) => e.stopPropagation()}
                 />
             )}
-            <p
-                id="lightbox-caption"
-                className="text-white text-sm mt-4 text-center max-w-lg opacity-90"
-                style={{ display: caption ? 'block' : 'none' }}
-            >
-                {caption}
-            </p>
-        </div>
+            {caption && (
+                <motion.p
+                    id="lightbox-caption"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-white text-sm mt-4 text-center max-w-lg opacity-90"
+                >
+                    {caption}
+                </motion.p>
+            )}
+        </motion.div>
     );
 };
 
 export default Lightbox;
+

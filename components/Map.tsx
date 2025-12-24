@@ -1,8 +1,7 @@
 "use client";
-
-import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { useEffect, useRef } from "react";
 
 interface MapProps {
     events: { lat: number; lng: number; id: string }[];
@@ -57,7 +56,6 @@ const Map = ({ events, activeEventId }: MapProps) => {
         const map = mapRef.current;
         if (!map) return;
 
-        // Clear existing markers
         Object.values(markersRef.current).forEach((m) => m.remove());
         markersRef.current = {};
 

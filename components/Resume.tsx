@@ -3,6 +3,7 @@ import { Icon } from "@iconify/react";
 import { RESUME_EVENTS, EDUCATION } from "@/data/resume";
 import { useRef, useState } from "react";
 import { handleDownload as exportToPDF } from "@/lib/export";
+import { motion } from "framer-motion";
 
 interface ResumeProps {
     onEventHover: (id: string | null) => void;
@@ -22,8 +23,14 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
     };
 
     return (
-        <div id="resume-container" className="relative z-20 min-h-screen flex flex-col items-start justify-start p-2 md:p-3 lg:p-4">
-            <div className="w-full max-w-xl bg-white rounded-xl shadow-2xl overflow-hidden relative" style={{ maxHeight: "calc(100vh - 4rem)" }}>
+        <motion.div
+            id="resume-container"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="relative z-20 min-h-screen flex flex-col items-start justify-start p-2 md:p-3 lg:p-4"
+        >
+            <div className="w-full max-w-xl bg-white rounded-xl shadow-2xl overflow-hidden relative border border-slate-200" style={{ maxHeight: "calc(100vh - 4rem)" }}>
                 <div id="resume-content" ref={contentRef} className="h-full overflow-y-auto" style={{ maxHeight: "calc(100vh - 4rem)" }}>
                     <div className="p-6 md:p-8">
                         <header className="mb-6 border-b border-slate-200 pb-5">
@@ -56,9 +63,10 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
                             <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Experience</h2>
                             <div className="space-y-4">
                                 {RESUME_EVENTS.map((event) => (
-                                    <div
+                                    <motion.div
                                         key={event.id}
-                                        className="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50"
+                                        whileHover={{ x: 2 }}
+                                        className="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-colors hover:bg-slate-50"
                                         onMouseEnter={() => onEventHover(event.id)}
                                     >
                                         <div className="flex justify-between items-start mb-1">
@@ -81,11 +89,13 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
                                             <Icon icon="lucide:map-pin" className="w-3" style={{ strokeWidth: 1.5 }} /> {event.location}
                                         </div>
                                         {event.thumbnails && (
-                                            <div className="work-thumbnails flex gap-2">
+                                            <div className="work-thumbnails flex gap-2 mt-3">
                                                 {event.thumbnails.map((thumb, idx) => (
-                                                    <button
+                                                    <motion.button
                                                         key={idx}
-                                                        className="work-thumbnail w-12 h-12 rounded-lg overflow-hidden border-2 border-slate-200 hover:border-blue-400 transition-colors"
+                                                        whileHover={{ scale: 1.1 }}
+                                                        whileTap={{ scale: 0.9 }}
+                                                        className="work-thumbnail w-12 h-12 rounded-lg overflow-hidden border-2 border-slate-200 hover:border-blue-400 transition-colors shadow-sm"
                                                         onClick={(e) => {
                                                             e.stopPropagation();
                                                             onImageClick(thumb.image, thumb.tooltip);
@@ -93,11 +103,11 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
                                                     >
                                                         <span className="thumbnail-tooltip">{thumb.tooltip}</span>
                                                         <img src={thumb.image} alt="" className="w-full h-full object-cover" />
-                                                    </button>
+                                                    </motion.button>
                                                 ))}
                                             </div>
                                         )}
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </section>
@@ -106,8 +116,12 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
                             <h2 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Education</h2>
                             <div className="space-y-4">
                                 {EDUCATION.map((edu, idx) => (
-                                    <div key={idx} className="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-all hover:bg-slate-50"
-                                        onMouseEnter={() => onEventHover(`edu-${idx}`)}>
+                                    <motion.div
+                                        key={idx}
+                                        whileHover={{ x: 2 }}
+                                        className="resume-event cursor-pointer p-2.5 -mx-2.5 rounded-lg transition-colors hover:bg-slate-50"
+                                        onMouseEnter={() => onEventHover(`edu-${idx}`)}
+                                    >
                                         <div className="flex justify-between items-start mb-1">
                                             <h3 className="text-sm font-medium text-slate-900">{edu.degree}</h3>
                                             <span className="text-xs text-slate-400 whitespace-nowrap ml-3">{edu.period}</span>
@@ -116,7 +130,7 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
                                         <div className="flex items-center gap-1 mt-1.5 text-xs text-blue-600">
                                             <Icon icon="lucide:map-pin" className="w-3" style={{ strokeWidth: 1.5 }} /> {edu.location}
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </section>
@@ -129,7 +143,13 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
                                     "Strong Communicator", "Detail-oriented", "Creative Problem Solver",
                                     "Data-driven", "Team Player"
                                 ].map((strength, idx) => (
-                                    <span key={idx} className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded">{strength}</span>
+                                    <motion.span
+                                        key={idx}
+                                        whileHover={{ scale: 1.05, backgroundColor: "#f1f5f9" }}
+                                        className="px-2 py-1 bg-slate-100 text-slate-600 text-xs rounded border border-transparent hover:border-slate-200 cursor-default"
+                                    >
+                                        {strength}
+                                    </motion.span>
                                 ))}
                             </div>
                         </section>
@@ -163,11 +183,13 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
                     </div>
                 </div>
             </div>
-            <button
+            <motion.button
                 id="download-pdf-btn"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 onClick={handleDownload}
                 disabled={isGenerating}
-                className="download-btn flex items-center gap-1.5 px-3 py-1.5 mt-2 bg-white border border-slate-200 text-slate-600 text-xs font-medium rounded-lg hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 transition-all shadow-sm"
+                className="download-btn flex items-center gap-1.5 px-3 py-1.5 mt-2 bg-white border border-slate-200 text-slate-600 text-xs font-medium rounded-lg hover:bg-slate-50 hover:text-slate-900 hover:border-slate-300 transition-all shadow-md active:shadow-sm"
             >
                 {isGenerating ? (
                     <>
@@ -180,9 +202,10 @@ const Resume = ({ onEventHover, onImageClick }: ResumeProps) => {
                         <span>Download PDF</span>
                     </>
                 )}
-            </button>
-        </div>
+            </motion.button>
+        </motion.div>
     );
 };
 
 export default Resume;
+
